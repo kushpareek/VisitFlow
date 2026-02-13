@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import React from "react";
 import Script from "next/script";
+import type { Variants } from "framer-motion";
 
 const PRODUCT = {
   name: "VisitFlow AI",
@@ -71,16 +72,23 @@ const FAQ = [
   },
 ];
 
-const container = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
-const fadeUp = {
+const container: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } },
+};
+
+const easeOut: [number, number, number, number] = [0.2, 0.85, 0.2, 1];
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 22, filter: "blur(10px)" },
   show: {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.9, ease: [0.2, 0.85, 0.2, 1] },
+    transition: { duration: 0.9, ease: easeOut },
   },
 };
+
 
 export default function Page() {
   return (
