@@ -122,7 +122,14 @@ export default function Page() {
       <a className="hover:text-white transition" href="#how">How it works</a>
       <a className="hover:text-white transition" href="#features">Features</a>
       <a className="hover:text-white transition" href="#security">Security</a>
-      <a className="hover:text-white transition" href="#faq">FAQ</a>
+      
+      <Link href="/integrations" className="hover:text-white transition">
+  Integrations
+</Link>
+<Link href="/pricing" className="hover:text-white transition">
+  Pricing
+</Link>
+<a className="hover:text-white transition" href="#faq">FAQ</a>
     </nav>
 
     <div className="flex items-center gap-3">
