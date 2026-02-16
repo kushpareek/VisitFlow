@@ -36,6 +36,11 @@ export const metadata: Metadata = {
     description:
       "Convert website visitors into scheduled property tours — 24/7.",
   },
+  icons: {
+  icon: "/favicon.ico",
+  shortcut: "/favicon-32x32.png",
+  apple: "/apple-touch-icon.png",
+},
 };
 
 const geistSans = Geist({
